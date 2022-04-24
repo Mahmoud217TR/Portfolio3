@@ -11560,6 +11560,56 @@ textarea.form-control-lg {
   font-family: Hyper heliX;
 }
 
+.display-container svg {
+  width: 300px;
+}
+.display-container #top-right-corner path,
+.display-container #top-left-corner path,
+.display-container #bottom-right-corner path,
+.display-container #bottom-left-corner path {
+  -webkit-animation: color-change 3s infinite linear;
+          animation: color-change 3s infinite linear;
+}
+
+/* Animations */
+@-webkit-keyframes color-change {
+  30% {
+    stroke: #00FC92;
+    fill: #00FC92;
+  }
+  60% {
+    stroke: #0A8858;
+    fill: #0A8858;
+  }
+  90% {
+    stroke: #0F2825;
+    fill: #0F2825;
+  }
+}
+@keyframes color-change {
+  30% {
+    stroke: #00FC92;
+    fill: #00FC92;
+  }
+  60% {
+    stroke: #0A8858;
+    fill: #0A8858;
+  }
+  90% {
+    stroke: #0F2825;
+    fill: #0F2825;
+  }
+}
+@media (min-width: 768px) {
+  .display-container svg {
+    width: 500px;
+  }
+}
+@media (min-width: 992px) {
+  .display-container svg {
+    width: 800px;
+  }
+}
 .hyper-helix {
   font-family: HyperHelix;
 }

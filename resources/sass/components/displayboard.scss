@@ -1,0 +1,57 @@
+// display board
+$display-board-width: 300px;
+$display-board-width-medium: 500px;
+$display-board-width-large: 800px;
+
+
+.display-container{
+    svg{
+        width: $display-board-width;
+    }
+    #top-right-corner path,
+    #top-left-corner path,
+    #bottom-right-corner path,
+    #bottom-left-corner path{
+        animation: color-change 3s infinite linear;
+    }
+}
+
+
+
+/* Animations */
+
+@-moz-keyframes color-change { 
+    30% { stroke: #00FC92; fill:#00FC92; }
+    60% { stroke: #0A8858; fill:#0A8858; }
+    90% { stroke: #0F2825; fill:#0F2825; }
+}
+@-webkit-keyframes color-change { 
+    30% { stroke: #00FC92; fill:#00FC92; }
+    60% { stroke: #0A8858; fill:#0A8858; }
+    90% { stroke: #0F2825; fill:#0F2825; }
+}
+@keyframes color-change { 
+    30% { stroke: #00FC92; fill:#00FC92; }
+    60% { stroke: #0A8858; fill:#0A8858; }
+    90% { stroke: #0F2825; fill:#0F2825; }
+}
+
+// for medium screens
+
+@media (min-width: 768px){
+    .display-container{
+        svg{
+            width: $display-board-width-medium;
+        }
+    }
+}
+
+// for large screens
+
+@media (min-width: 992px){
+    .display-container{
+        svg{
+            width: $display-board-width-large;
+        }
+    }
+}
