@@ -10,3 +10,80 @@
 
 // Components
 @import 'components.scss';
+
+
+// font family
+
+.hyper-helix{
+    font-family: HyperHelix;
+}
+
+.savec{
+    font-family: savec;
+    letter-spacing: .1em;
+}
+
+
+// text color
+
+.text-light-color{
+    color: $light-color;
+}
+
+.text-heavy-color{
+    color: $heavy-color;
+}
+
+.text-dim-color{
+    color: $dim-color;
+}
+
+.text-dark-color{
+    color: $dark-color;
+}
+
+.text-white-color{
+    color: $white-color;
+}
+
+
+
+// background color
+
+.background-light{
+    background-color: $light-color;
+}
+
+.background-heavy{
+    background-color: $heavy-color;
+}
+
+.background-dim{
+    background-color: $dim-color;
+}
+
+.background-dark{
+    background-color: $dark-color;
+}
+
+.background-white{
+    background-color: $white-color;
+}
+
+// styles
+
+.text-display{
+    font-size: 4rem;
+}
+
+.text-h1{
+    font-size: 3rem;
+}
+
+.text-h2{
+    font-size: 2.25rem;
+}
+
+.text-h3{
+    font-size: 1.75rem;
+}

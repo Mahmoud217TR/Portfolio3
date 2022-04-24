@@ -1,0 +1,121 @@
+// gloab 
+$gloab-width: 300px;
+$gloab-height: 300px;
+$gloab-width-large: 400px;
+$gloab-height-large: 400px;
+
+.gloab{
+    width: $gloab-width;
+    height: $gloab-height;
+}
+
+#outer-orbit-1, #outer-orbit-2{
+    transform-origin: center;
+    animation: outer-orbit-rotate 5s infinite;
+}
+
+#orbit-1, #orbit-2{
+    transform-origin: center;
+    animation: inner-orbit-rotate 3s infinite linear;
+}
+
+#orbit-3{
+    transform-origin: center;
+    animation: inner-orbit-reverse-rotate 3s infinite linear;
+}
+
+.gloab-container{
+    position: relative;
+    width: $gloab-width;
+    height: $gloab-height;
+}
+
+.gloab-text{
+    color: white;
+    font-family: Hyper heliX;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    font-size: 1rem;
+}
+
+
+/* Animations */
+
+@-moz-keyframes outer-orbit-rotate { 
+    40% { -webkit-transform: rotate(360deg); } 
+    75% { -webkit-transform: rotate(360deg); } 
+    90% { -webkit-transform: rotate(0deg); } 
+    100% { -webkit-transform: rotate(0deg); } 
+}
+@-webkit-keyframes outer-orbit-rotate { 
+    40% { -webkit-transform: rotate(360deg); } 
+    75% { -webkit-transform: rotate(360deg); } 
+    90% { -webkit-transform: rotate(0deg); } 
+    100% { -webkit-transform: rotate(0deg); } 
+}
+@keyframes outer-orbit-rotate { 
+    40% { 
+        -webkit-transform: rotate(360deg); 
+        transform:rotate(360deg); 
+    }
+    75% { 
+        -webkit-transform: rotate(360deg); 
+        transform:rotate(360deg); 
+    }
+    90% { 
+        -webkit-transform: rotate(0deg); 
+        transform:rotate(0deg); 
+    }
+    100% { 
+        -webkit-transform: rotate(0deg); 
+        transform:rotate(0deg); 
+    } 
+}
+
+@-moz-keyframes inner-orbit-rotate { 
+    100% { -webkit-transform: rotate(360deg); } 
+}
+@-webkit-keyframes inner-orbit-rotate { 
+    100% { -webkit-transform: rotate(360deg); } 
+}
+@keyframes inner-orbit-rotate { 
+    100% { 
+        -webkit-transform: rotate(360deg); 
+        transform:rotate(360deg); 
+    } 
+}
+
+@-moz-keyframes inner-orbit-reverse-rotate { 
+    100% { -webkit-transform: rotate(-360deg); } 
+}
+@-webkit-keyframes inner-orbit-reverse-rotate { 
+    100% { -webkit-transform: rotate(-360deg); } 
+}
+@keyframes inner-orbit-reverse-rotate { 
+    100% { 
+        -webkit-transform: rotate(-360deg); 
+        transform:rotate(-360deg); 
+    } 
+}
+
+
+// for large screens
+
+
+@media (min-width: 992px){
+    .gloab-container{
+        width: $gloab-width-large;
+        height: $gloab-height-large;
+    }
+
+    .gloab{
+        width: $gloab-width-large;
+        height: $gloab-height-large;
+    }
+
+    .gloab-text{
+        font-size: 1.5rem;
+    }
+}

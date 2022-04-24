@@ -1,0 +1,81 @@
+// special button (arrows button)
+
+$arrow-button-width: 281px;
+$arrow-button-height: 60px;
+#arrows-button{
+    width: $arrow-button-width;
+    height: $arrow-button-height;
+    border: none;
+    background-color: transparent;
+}
+
+.arrow-button-container{
+    position: relative;
+    display: inline-block;
+    width: $arrow-button-width;
+    height: $arrow-button-height;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+.arrow-button-container:active path{
+    stroke:#27AE5F;
+}
+
+.arrow-button-container:hover #left-arrow-1,
+.arrow-button-container:hover #right-arrow-1{
+    animation: first-arrow-color-change 1s infinite linear;;
+}
+
+.arrow-button-container:hover #left-arrow-2,
+.arrow-button-container:hover #right-arrow-2{
+    animation: first-arrow-color-change 1s infinite linear;;
+}
+
+
+.button-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #00FC92;
+    font-family: Hyper heliX;
+    font-size: 1.5rem;
+    width: 100%;
+    text-align: center;
+}
+
+/* Animations */
+
+@-moz-keyframes first-arrow-color-change { 
+    20% { stroke: #00FC92; }
+    40% { stroke: #0A8858; }
+    60% { stroke: #0F2825; }
+}
+@-webkit-keyframes first-arrow-color-change { 
+    20% { stroke: #00FC92; }
+    40% { stroke: #0A8858; }
+    60% { stroke: #0F2825; }
+}
+@keyframes first-arrow-color-change { 
+    20% { stroke: #00FC92; }
+    40% { stroke: #0A8858; }
+    60% { stroke: #0F2825; }
+}
+
+@-moz-keyframes second-arrow-color-change { 
+    40% { stroke: #00FC92; } 
+    80% { stroke: #0A8858; }
+}
+@-webkit-keyframes second-arrow-color-change { 
+    40% { stroke: #00FC92; } 
+    80% { stroke: #0A8858; }
+}
+@keyframes second-arrow-color-change { 
+    40% { stroke: #00FC92; } 
+    80% { stroke: #0A8858; } 
+}

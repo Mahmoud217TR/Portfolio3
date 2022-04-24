@@ -1,0 +1,37 @@
+// button
+
+$button-width: 180px;
+$button-height: 60px;
+
+.button{
+    width: $button-width;
+    height: $button-height;
+    border: none;
+    background-color: transparent;
+}
+
+.button-container{
+    position: relative;
+    display: inline-block;
+    width: $button-width;
+    height: $button-height;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+.button-container:active .button path{
+    stroke:#27AE5F;
+}
+
+.button-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #00FC92;
+    font-family: Hyper heliX;
+}

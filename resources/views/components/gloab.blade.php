@@ -1,5 +1,5 @@
 <div class="gloab-container">
-    <svg width="300" height="300" viewBox="0 0 580 580" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg class="gloab" width="300" height="300" viewBox="0 0 580 580" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g id="gloab">
             <circle id="inner-circle" cx="290.725" cy="292.005" r="146.76" stroke="white" stroke-width="3"/>
             <circle id="outer-circle" cx="290.224" cy="292.506" r="243.43" fill="#185B32" fill-opacity="0.5" stroke="#00FC92" stroke-width="3" stroke-dasharray="6 6"/>

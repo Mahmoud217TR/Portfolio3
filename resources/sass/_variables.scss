@@ -1,7 +1,16 @@
+// Colors
+$light-color:#00FC92; 
+$dim-color: #0A8858;
+$heavy-color:#0F2825;
+$dark-color: #111119;
+$white-color: #ffffff;
+
 // Body
-$body-bg: #111119;
+$body-bg: $dark-color;
 
 // Typography
 $font-family-sans-serif: 'Nunito', sans-serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
+
+

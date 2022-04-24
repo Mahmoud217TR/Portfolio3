@@ -1,0 +1,37 @@
+// small button
+
+$small-button-width: 100px;
+$small-button-height: 34px;
+
+.small-button{
+    width: $small-button-width;
+    height: $small-button-height;
+    border: none;
+    background-color: transparent;
+}
+
+.small-button-container{
+    position: relative;
+    display: inline-block;
+    width: $small-button-width;
+    height: $small-button-height;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+.small-button-container:active .small-button path{
+    stroke:#27AE5F;
+}
+
+.small-button-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #00FC92;
+    font-family: Hyper heliX;
+}
