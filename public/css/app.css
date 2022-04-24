@@ -11307,3 +11307,204 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+#gloab {
+  background-color: red;
+}
+
+#outer-orbit-1, #outer-orbit-2 {
+  transform-origin: center;
+  -webkit-animation: outer-orbit-rotate 5s infinite;
+          animation: outer-orbit-rotate 5s infinite;
+}
+
+#orbit-1, #orbit-2 {
+  transform-origin: center;
+  -webkit-animation: inner-orbit-rotate 3s infinite linear;
+          animation: inner-orbit-rotate 3s infinite linear;
+}
+
+#orbit-3 {
+  transform-origin: center;
+  -webkit-animation: inner-orbit-reverse-rotate 3s infinite linear;
+          animation: inner-orbit-reverse-rotate 3s infinite linear;
+}
+
+.gloab-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.gloab-text {
+  color: white;
+  font-family: Hyper heliX;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Animations */
+@-webkit-keyframes outer-orbit-rotate {
+  40% {
+    -webkit-transform: rotate(360deg);
+  }
+  75% {
+    -webkit-transform: rotate(360deg);
+  }
+  90% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+  }
+}
+@keyframes outer-orbit-rotate {
+  40% {
+    transform: rotate(360deg);
+  }
+  75% {
+    transform: rotate(360deg);
+  }
+  90% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes inner-orbit-rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes inner-orbit-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes inner-orbit-reverse-rotate {
+  100% {
+    -webkit-transform: rotate(-360deg);
+  }
+}
+@keyframes inner-orbit-reverse-rotate {
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+.button {
+  width: 180px;
+  height: 60px;
+  border: none;
+  background-color: transparent;
+}
+
+.button:active path {
+  stroke: #27AE5F;
+}
+
+.button-container {
+  position: relative;
+  display: inline-block;
+  width: 180px;
+  height: 60px;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+.button-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #00FC92;
+  font-family: Hyper heliX;
+}
+
+#arrows-button {
+  width: 281px;
+  height: 60px;
+  border: none;
+  background-color: transparent;
+}
+
+.arrow-button-container {
+  position: relative;
+  display: inline-block;
+  width: 281px;
+  height: 60px;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+.arrow-button-container:active path {
+  stroke: #27AE5F;
+}
+
+.arrow-button-container:hover #left-arrow-1,
+.arrow-button-container:hover #right-arrow-1 {
+  -webkit-animation: first-arrow-color-change 1s infinite linear;
+          animation: first-arrow-color-change 1s infinite linear;
+}
+
+.arrow-button-container:hover #left-arrow-2,
+.arrow-button-container:hover #right-arrow-2 {
+  -webkit-animation: first-arrow-color-change 1s infinite linear;
+          animation: first-arrow-color-change 1s infinite linear;
+}
+
+.button-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #00FC92;
+  font-family: Hyper heliX;
+}
+
+/* Animations */
+@-webkit-keyframes first-arrow-color-change {
+  20% {
+    stroke: #00FC92;
+  }
+  40% {
+    stroke: #0A8858;
+  }
+  60% {
+    stroke: #0F2825;
+  }
+}
+@keyframes first-arrow-color-change {
+  20% {
+    stroke: #00FC92;
+  }
+  40% {
+    stroke: #0A8858;
+  }
+  60% {
+    stroke: #0F2825;
+  }
+}
+@-webkit-keyframes second-arrow-color-change {
+  40% {
+    stroke: #00FC92;
+  }
+  80% {
+    stroke: #0A8858;
+  }
+}
+@keyframes second-arrow-color-change {
+  40% {
+    stroke: #00FC92;
+  }
+  80% {
+    stroke: #0A8858;
+  }
+}
