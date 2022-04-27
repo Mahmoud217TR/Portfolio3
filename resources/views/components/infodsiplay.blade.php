@@ -17,7 +17,13 @@
             <path id="lower-boarder" d="M185.094 274.66L159.321 302H401.344L385.389 292.887H274.932L256.768 274.66H185.094Z" fill="#00FC92" stroke="#01FE94" stroke-width="3"/>
         </g>
     </svg>
-    <div class="counter-number hyper-helix text-h1">
+    <div class="counter-number hyper-helix">
         {{ $number??"1" }}
     </div>
+    <div class="info-display-title hyper-helix">
+        {{ $title??"title" }}
+    </div>
+    <p class="info-display-content savec">
+        {{ $content??"Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, possimus!" }} 
+    </p>
 </div>

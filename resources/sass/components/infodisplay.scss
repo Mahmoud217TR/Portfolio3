@@ -1,13 +1,71 @@
 .info-display-container{
     position: relative;
+    svg{
+        width:300px;
+    }
 }
 
 .counter-number{
     position: absolute;
     display: inline;
-    top: 12px;
-    left: 47px;
+    top: 66px;
+    left: 28px;
     color: #00FC92;
     transform: translateX(-50%);
-    font-size: 3rem;
+    font-size: 2rem;
+}
+
+.info-display-title{
+    position: absolute;
+    top: 100px;
+    left: 60px;
+    color: #00FC92;
+    font-size: 1.5rem;
+    width: 75%;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.info-display-content{
+    position: absolute;
+    top: 145px;
+    left: 65px;
+    width: 80%;
+    color: #ffffff;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+
+// for small(600px width) screens and above
+
+@media (min-width: 600px){
+    .info-display-container{
+        svg{
+            width:503px;
+            height: 304px;
+        }
+
+        .counter-number{
+            top: 12px;
+            left: 47px;
+            font-size: 3rem;
+        }
+        
+        .info-display-title{
+            font-size: 1.75rem;
+            top: 105px;
+        }
+
+        .info-display-content{
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+    }
 }
