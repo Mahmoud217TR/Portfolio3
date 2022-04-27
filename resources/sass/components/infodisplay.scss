@@ -1,0 +1,13 @@
+.info-display-container{
+    position: relative;
+}
+
+.counter-number{
+    position: absolute;
+    display: inline;
+    top: 12px;
+    left: 47px;
+    color: #00FC92;
+    transform: translateX(-50%);
+    font-size: 3rem;
+}

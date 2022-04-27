@@ -14,7 +14,7 @@
             <div class="col-lg-6 d-flex justify-content-center justify-content-lg-start align-items-center">
                 <ul class="list-unstyled">
                     <li><a href="#">@include('components.specialbutton',['text'=>'Download CV'])</a></li>
-                    <li class="mt-3"><a href="#">@include('components.specialbutton',['text'=>'About Me'])</a></li>
+                    <li class="mt-3"><a href="{{ route('about') }}">@include('components.specialbutton',['text'=>'About Me'])</a></li>
                     <li class="mt-3"><a href="#">@include('components.specialbutton',['text'=>'My Projects'])</a></li>
                     <li class="mt-3"><a href="#">@include('components.specialbutton',['text'=>'Contacts'])</a></li>
                 </ul>
