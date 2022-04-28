@@ -27,7 +27,7 @@
         {{ $content??"Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, possimus!" }} 
     </p>
 </div>
-<div class="controls d-flex justify-content-between mt-3">
+<div class="controls d-flex justify-content-between mt-3 px-5">
     <a href="#">
         @include('components.previousbutton')
     </a>
