@@ -1,6 +1,6 @@
 .info-display-container{
     position: relative;
-    svg{
+    .info-display-svg{
         width:300px;
     }
 }
@@ -13,6 +13,11 @@
     color: #00FC92;
     transform: translateX(-50%);
     font-size: 2rem;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .info-display-title{
@@ -45,7 +50,7 @@
 
 @media (min-width: 600px){
     .info-display-container{
-        svg{
+        .info-display-svg{
             width:503px;
             height: 304px;
         }

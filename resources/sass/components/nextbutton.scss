@@ -1,0 +1,29 @@
+.next-button-container{
+    display: inline-block;
+}
+
+.next-button-container:hover #next-button #arrow{
+    animation: color-change 1s infinite linear;
+}
+
+.next-button-container:active #next-button #arrow{
+    stroke:#0A8858;
+}
+
+/* Animations */
+
+@-moz-keyframes color-change { 
+    20% { stroke: #00FC92; }
+    40% { stroke: #0A8858; }
+    60% { stroke: #0F2825; }
+}
+@-webkit-keyframes color-change { 
+    20% { stroke: #00FC92; }
+    40% { stroke: #0A8858; }
+    60% { stroke: #0F2825; }
+}
+@keyframes color-change { 
+    20% { stroke: #00FC92; }
+    40% { stroke: #0A8858; }
+    60% { stroke: #0F2825; }
+}

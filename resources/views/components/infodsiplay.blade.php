@@ -1,5 +1,5 @@
 <div class="info-display-container">
-    <svg width="503" height="304" viewBox="0 0 503 304" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg class="info-display-svg" width="503" height="304" viewBox="0 0 503 304" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g id="info-display">
             <path id="shape" d="M180.676 44.6108H90.5925L90.1016 79.5862L46.4099 104.956L29.9642 95.8424V255.941L75.1286 301.261H149.748L183.867 267.025H260.45L280.087 286.729H386.616L414.353 301.261L501 255.941V76.8768L469.827 45.5961H387.107L371.152 60.3744H190.494L180.676 44.6108Z" fill="#0F1D1E" stroke="#01FE94" stroke-width="3"/>
             <g id="counter">
@@ -26,4 +26,12 @@
     <p class="info-display-content savec">
         {{ $content??"Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, possimus!" }} 
     </p>
+</div>
+<div class="controls d-flex justify-content-between mt-3">
+    <a href="#">
+        @include('components.previousbutton')
+    </a>
+    <a href="#">
+        @include('components.nextbutton')
+    </a>
 </div>

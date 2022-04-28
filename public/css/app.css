@@ -11673,7 +11673,7 @@ textarea.form-control-lg {
 .info-display-container {
   position: relative;
 }
-.info-display-container svg {
+.info-display-container .info-display-svg {
   width: 300px;
 }
 
@@ -11685,6 +11685,10 @@ textarea.form-control-lg {
   color: #00FC92;
   transform: translateX(-50%);
   font-size: 2rem;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .info-display-title {
@@ -11713,7 +11717,7 @@ textarea.form-control-lg {
 }
 
 @media (min-width: 600px) {
-  .info-display-container svg {
+  .info-display-container .info-display-svg {
     width: 503px;
     height: 304px;
   }
@@ -11731,6 +11735,78 @@ textarea.form-control-lg {
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
+  }
+}
+.next-button-container {
+  display: inline-block;
+}
+
+.next-button-container:hover #next-button #arrow {
+  -webkit-animation: color-change 1s infinite linear;
+          animation: color-change 1s infinite linear;
+}
+
+.next-button-container:active #next-button #arrow {
+  stroke: #0A8858;
+}
+
+/* Animations */
+@-webkit-keyframes color-change {
+  20% {
+    stroke: #00FC92;
+  }
+  40% {
+    stroke: #0A8858;
+  }
+  60% {
+    stroke: #0F2825;
+  }
+}
+@keyframes color-change {
+  20% {
+    stroke: #00FC92;
+  }
+  40% {
+    stroke: #0A8858;
+  }
+  60% {
+    stroke: #0F2825;
+  }
+}
+.previous-button-container {
+  display: inline-block;
+}
+
+.previous-button-container:hover #previous-button #arrow {
+  -webkit-animation: color-change 1s infinite linear;
+          animation: color-change 1s infinite linear;
+}
+
+.previous-button-container:active #previous-button #arrow {
+  stroke: #0A8858;
+}
+
+/* Animations */
+@-webkit-keyframes color-change {
+  20% {
+    stroke: #00FC92;
+  }
+  40% {
+    stroke: #0A8858;
+  }
+  60% {
+    stroke: #0F2825;
+  }
+}
+@keyframes color-change {
+  20% {
+    stroke: #00FC92;
+  }
+  40% {
+    stroke: #0A8858;
+  }
+  60% {
+    stroke: #0F2825;
   }
 }
 .hyper-helix {
