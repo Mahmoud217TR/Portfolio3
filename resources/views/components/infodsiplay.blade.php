@@ -29,9 +29,9 @@
 </div>
 <div class="controls d-flex justify-content-between mt-3 px-5">
     <a href="#">
-        @include('components.previousbutton')
+        @include('components.buttons.previousbutton')
     </a>
     <a href="#">
-        @include('components.nextbutton')
+        @include('components.buttons.nextbutton')
     </a>
 </div>

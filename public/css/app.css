@@ -11809,6 +11809,63 @@ textarea.form-control-lg {
     stroke: #0F2825;
   }
 }
+.link {
+  text-decoration: none;
+}
+
+.link:hover #background-2 {
+  -webkit-animation: first-circle-color-change 1s infinite linear;
+          animation: first-circle-color-change 1s infinite linear;
+}
+
+.link:hover #background-3 {
+  -webkit-animation: second-circle-color-change 1s infinite linear;
+          animation: second-circle-color-change 1s infinite linear;
+}
+
+/* Animations */
+@-webkit-keyframes first-circle-color-change {
+  20% {
+    fill: #00FC92;
+  }
+  40% {
+    fill: #0A8858;
+  }
+  60% {
+    fill: #0F2825;
+  }
+}
+@keyframes first-circle-color-change {
+  20% {
+    fill: #00FC92;
+  }
+  40% {
+    fill: #0A8858;
+  }
+  60% {
+    fill: #0F2825;
+  }
+}
+@-webkit-keyframes second-circle-color-change {
+  40% {
+    fill: #00FC92;
+  }
+  80% {
+    fill: #0A8858;
+  }
+}
+@keyframes second-circle-color-change {
+  40% {
+    fill: #00FC92;
+  }
+  80% {
+    fill: #0A8858;
+  }
+}
+.hr-svg {
+  width: 100%;
+}
+
 .hyper-helix {
   font-family: HyperHelix;
 }

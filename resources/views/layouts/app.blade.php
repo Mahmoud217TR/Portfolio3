@@ -36,7 +36,7 @@
                 <ul class="navbar-nav ms-md-auto">
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                            @include('components.button',['text'=>"Menu"])
+                            @include('components.buttons.button',['text'=>"Menu"])
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-end menu-component me-4" aria-labelledby="navbarDropdown">

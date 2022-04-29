@@ -1,0 +1,42 @@
+.link{
+    text-decoration: none;
+}
+
+.link:hover #background-2{
+    animation: first-circle-color-change 1s infinite linear;
+}
+
+.link:hover #background-3{
+    animation: second-circle-color-change 1s infinite linear;
+}
+
+/* Animations */
+
+@-moz-keyframes first-circle-color-change { 
+    20% { fill: #00FC92; }
+    40% { fill: #0A8858; }
+    60% { fill: #0F2825; }
+}
+@-webkit-keyframes first-circle-color-change { 
+    20% { fill: #00FC92; }
+    40% { fill: #0A8858; }
+    60% { fill: #0F2825; }
+}
+@keyframes first-circle-color-change { 
+    20% { fill: #00FC92; }
+    40% { fill: #0A8858; }
+    60% { fill: #0F2825; }
+}
+
+@-moz-keyframes second-circle-color-change { 
+    40% { fill: #00FC92; } 
+    80% { fill: #0A8858; }
+}
+@-webkit-keyframes second-circle-color-change { 
+    40% { fill: #00FC92; } 
+    80% { fill: #0A8858; }
+}
+@keyframes second-circle-color-change { 
+    40% { fill: #00FC92; } 
+    80% { fill: #0A8858; } 
+}
