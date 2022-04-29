@@ -40,20 +40,20 @@
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-end menu-component me-4" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">@include('components.menuitem')</a>
+                            <a class="dropdown-item" href="#">@include('components.menuitem')</a>
+                            <a class="dropdown-item" href="#">@include('components.menuitem')</a>
                             @auth
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
                                             document.getElementById('logout-form').submit();">
-                                {{ __('Logout') }}
+                                @include('components.menuitem', ['text'=>'Logout'])
                             </a>
 
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                 @csrf
                             </form>
                             @endauth
-                            <a class="dropdown-item" href="#">@include('components.menuitem')</a>
-                            <a class="dropdown-item" href="#">@include('components.menuitem')</a>
-                            <a class="dropdown-item" href="#">@include('components.menuitem')</a>
                         </div>
                     </li>
                 </ul>
