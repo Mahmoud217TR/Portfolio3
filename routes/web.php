@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PortfolioController;
+use App\Http\Controllers\ProjectController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Auth::routes();
+Auth::routes(['register' => false]);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
@@ -22,3 +23,5 @@ Route::controller(PortfolioController::class)->group(function(){
     Route::get('/','welcome')->name('welcome');
     Route::get('/about','about')->name('about');
 });
+
+Route::resource('project', ProjectController::class);
