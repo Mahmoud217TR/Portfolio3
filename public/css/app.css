@@ -11930,6 +11930,8 @@ textarea.form-control-lg {
   .project-card .project-link {
     top: 210px;
     left: 25px;
+    width: auto;
+    height: auto;
   }
   .project-card .project-link .small-button-container {
     display: inline-block;
@@ -12011,4 +12013,14 @@ textarea.form-control-lg {
 
 .error-container {
   height: 40vh;
+}
+
+.pagination-indecator {
+  border: solid #00FC92 3px;
+  border-radius: 15px;
+  width: 50px;
+  height: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

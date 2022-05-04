@@ -91,3 +91,13 @@
 .error-container{
     height: 40vh;
 }
+
+.pagination-indecator{
+    border: solid $light-color 3px;
+    border-radius: 15px;
+    width: 50px;
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
