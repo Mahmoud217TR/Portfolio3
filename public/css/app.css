@@ -11971,6 +11971,93 @@ textarea.form-control-lg {
     overflow: hidden;
   }
 }
+:root {
+  /* -- My colors ------------------------------------------------------------------------ */
+  --light-color:#00FC92;
+  --dim-color: #0A8858;
+  --heavy-color:#0F2825;
+  --dark-color: #111119;
+  --white-color: #ffffff;
+  /* ------------------------------------------------------------------------------------- */
+  --ck-color-base-foreground:	var(--dim-color)!important;
+  --ck-color-base-background:	var(--dark-color)!important;
+  --ck-color-base-border:	var(--dim-color)!important;
+  --ck-color-base-action:	hsl(104, 44%, 48%);
+  --ck-color-base-focus:	var(--light-color)!important;
+  --ck-color-base-text:	var(--white-color)!important;
+  --ck-color-base-active:	var(--light-color)!important;
+  --ck-color-base-active-focus:	var(--light-color)!important;
+  --ck-color-base-error:	hsl(15, 100%, 43%);
+  /* -- Generic colors ------------------------------------------------------------------------ */
+  --ck-color-focus-border:	var(--light-color)!important;
+  --ck-color-focus-outer-shadow:	hsl(207, 89%, 86%);
+  --ck-color-focus-disabled-shadow:	hsla(209, 90%, 72%,.3);
+  --ck-color-focus-error-shadow:	hsla(9,100%,56%,.3);
+  --ck-color-text:	var(--ck-color-base-text);
+  --ck-color-shadow-drop:	hsla(0, 0%, 0%, 0.15);
+  --ck-color-shadow-drop-active:	hsla(0, 0%, 0%, 0.2);
+  --ck-color-shadow-inner:	hsla(0, 0%, 0%, 0.1);
+  /* -- Buttons ------------------------------------------------------------------------------- */
+  --ck-color-button-default-background:	transparent;
+  --ck-color-button-default-hover-background:	var(--light-color)!important;
+  --ck-color-button-default-active-background:	var(--light-color)!important;
+  --ck-color-button-default-active-shadow:	var(--light-color)!important;
+  --ck-color-button-default-disabled-background:	transparent;
+  --ck-color-button-on-background:	var(--light-color)!important;
+  --ck-color-button-on-hover-background:	var(--light-color)!important;
+  --ck-color-button-on-active-background:	var(--light-color)!important;
+  --ck-color-button-on-active-shadow:	hsl(0, 0%, 63%);
+  --ck-color-button-on-disabled-background:	hsl(0, 0%, 87%);
+  --ck-color-button-action-background:	var(--ck-color-base-action);
+  --ck-color-button-action-hover-background:	hsl(104, 44%, 43%);
+  --ck-color-button-action-active-background:	hsl(104, 44%, 41%);
+  --ck-color-button-action-active-shadow:	hsl(104, 44%, 36%);
+  --ck-color-button-action-disabled-background:	hsl(104, 44%, 58%);
+  --ck-color-button-action-text:	var(--ck-color-base-background);
+  --ck-color-button-save:	hsl(120, 100%, 27%);
+  --ck-color-button-cancel:	hsl(15, 100%, 43%);
+  --ck-color-switch-button-off-background:	hsl(0, 0%, 69%);
+  --ck-color-switch-button-off-hover-background:	hsl(0, 0%, 64%);
+  --ck-color-switch-button-on-background:	var(--ck-color-button-action-background);
+  --ck-color-switch-button-on-hover-background:	hsl(104, 44%, 43%);
+  --ck-color-switch-button-inner-background:	var(--ck-color-base-background);
+  --ck-color-switch-button-inner-shadow:	hsla(0, 0%, 0%, 0.1);
+  /* -- Dropdown ------------------------------------------------------------------------------ */
+  --ck-color-dropdown-panel-background:	var(--ck-color-base-background);
+  --ck-color-dropdown-panel-border:	var(--ck-color-base-border);
+  /* -- Input --------------------------------------------------------------------------------- */
+  --ck-color-input-background:	var(--ck-color-base-background);
+  --ck-color-input-border:	hsl(0, 0%, 78%);
+  --ck-color-input-error-border:	var(--ck-color-base-error);
+  --ck-color-input-text:	var(--ck-color-base-text);
+  --ck-color-input-disabled-background:	hsl(0, 0%, 95%);
+  --ck-color-input-disabled-border:	hsl(0, 0%, 78%);
+  --ck-color-input-disabled-text:	hsl(0, 0%, 46%);
+  /* -- List ---------------------------------------------------------------------------------- */
+  --ck-color-list-background:	var(--ck-color-base-background);
+  --ck-color-list-button-hover-background:	var(--ck-color-button-default-hover-background);
+  --ck-color-list-button-on-background:	var(--dim-color)!important;
+  --ck-color-list-button-on-background-focus:	var(--ck-color-base-active-focus);
+  --ck-color-list-button-on-text:	var(--white-color)!important;
+  /* -- Panel --------------------------------------------------------------------------------- */
+  --ck-color-panel-background:	var(--ck-color-base-background);
+  --ck-color-panel-border:	var(--ck-color-base-border);
+  /* -- Toolbar ------------------------------------------------------------------------------- */
+  --ck-color-toolbar-background:	var(--ck-color-base-foreground);
+  --ck-color-toolbar-border:	var(--ck-color-base-border);
+  /* -- Tooltip ------------------------------------------------------------------------------- */
+  --ck-color-tooltip-background:	var(--ck-color-base-text);
+  --ck-color-tooltip-text:	var(--ck-color-base-background);
+  /* -- Engine -------------------------------------------------------------------------------- */
+  --ck-color-engine-placeholder-text:	hsl(0, 0%, 44%);
+  /* -- Upload -------------------------------------------------------------------------------- */
+  --ck-color-upload-bar-background:	hsl(209, 92%, 70%);
+  /* -- Link -------------------------------------------------------------------------------- */
+  --ck-color-link-default:	hsl(240, 100%, 47%);
+  --ck-color-link-selected-background:	hsla(201, 100%, 56%, 0.1);
+  --ck-color-link-fake-selection:	hsla(201, 100%, 56%, 0.3);
+}
+
 .hyper-helix {
   font-family: HyperHelix;
 }
@@ -12020,6 +12107,19 @@ textarea.form-control-lg {
   background-color: #ffffff;
 }
 
+body {
+  color: #ffffff;
+}
+body ::-moz-selection {
+  /* Code for Firefox */
+  color: #ffffff;
+  background: #0A8858;
+}
+body ::selection {
+  color: #ffffff;
+  background: #0A8858;
+}
+
 .text-display {
   font-size: 4rem;
 }
@@ -12048,4 +12148,18 @@ textarea.form-control-lg {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+input {
+  font-family: HyperHelix;
+  color: #00FC92 !important;
+}
+
+input:focus {
+  border-color: #00FC92 !important;
+  box-shadow: 0 0 0 0.25rem rgba(8, 138, 87, 0.25) !important;
+}
+
+::-webkit-calendar-picker-indicator {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 24 24"><path fill="%2300FC92" d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/></svg>');
 }

@@ -32,7 +32,8 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        //
+        $this->authorize('create', Project::class);
+        return view('projects.create', ['project'=>new Project]);
     }
 
     /**
