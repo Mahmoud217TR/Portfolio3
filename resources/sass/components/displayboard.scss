@@ -13,7 +13,7 @@ $display-board-width-large: 800px;
     #top-left-corner path,
     #bottom-right-corner path,
     #bottom-left-corner path{
-        animation: color-change 1s infinite linear;
+        animation: corner-color-change 1s infinite linear;
     }
 
     .displayboard-img{
@@ -32,20 +32,20 @@ $display-board-width-large: 800px;
 
 /* Animations */
 
-@-moz-keyframes color-change { 
-    30% { stroke: #00FC92; fill:#00FC92; }
-    60% { stroke: #0A8858; fill:#0A8858; }
-    90% { stroke: #0F2825; fill:#0F2825; }
+@-moz-keyframes corner-color-change { 
+    30% { fill:#00FC92; }
+    60% { fill:#0A8858; }
+    90% { fill:#0F2825; }
 }
-@-webkit-keyframes color-change { 
-    30% { stroke: #00FC92; fill:#00FC92; }
-    60% { stroke: #0A8858; fill:#0A8858; }
-    90% { stroke: #0F2825; fill:#0F2825; }
+@-webkit-keyframes corner-color-change { 
+    30% { fill:#00FC92; }
+    60% { fill:#0A8858; }
+    90% { fill:#0F2825; }
 }
-@keyframes color-change { 
-    30% { stroke: #00FC92; fill:#00FC92; }
-    60% { stroke: #0A8858; fill:#0A8858; }
-    90% { stroke: #0F2825; fill:#0F2825; }
+@keyframes corner-color-change { 
+    30% { fill:#00FC92; }
+    60% { fill:#0A8858; }
+    90% { fill:#0F2825; }
 }
 
 // for medium screens

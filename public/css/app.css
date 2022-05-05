@@ -11570,8 +11570,8 @@ textarea.form-control-lg {
 .display-container #top-left-corner path,
 .display-container #bottom-right-corner path,
 .display-container #bottom-left-corner path {
-  -webkit-animation: color-change 1s infinite linear;
-          animation: color-change 1s infinite linear;
+  -webkit-animation: corner-color-change 1s infinite linear;
+          animation: corner-color-change 1s infinite linear;
 }
 .display-container .displayboard-img {
   position: absolute;
@@ -11585,31 +11585,25 @@ textarea.form-control-lg {
 }
 
 /* Animations */
-@-webkit-keyframes color-change {
+@-webkit-keyframes corner-color-change {
   30% {
-    stroke: #00FC92;
     fill: #00FC92;
   }
   60% {
-    stroke: #0A8858;
     fill: #0A8858;
   }
   90% {
-    stroke: #0F2825;
     fill: #0F2825;
   }
 }
-@keyframes color-change {
+@keyframes corner-color-change {
   30% {
-    stroke: #00FC92;
     fill: #00FC92;
   }
   60% {
-    stroke: #0A8858;
     fill: #0A8858;
   }
   90% {
-    stroke: #0F2825;
     fill: #0F2825;
   }
 }
