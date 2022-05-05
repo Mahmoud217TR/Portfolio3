@@ -43,7 +43,7 @@
 
 <script>
     export default {
-        props: ['pics'],
+        props: ['pics', 'prefix'],
         data() {
             return {
                 index: 0,
@@ -53,7 +53,11 @@
         },
         methods: {
             changeImage(){
-                this.currentUrl = this.pictures[this.index]
+                if (this.prefix){
+                    this.currentUrl = this.prefix + this.pictures[this.index]
+                }else{
+                    this.currentUrl = this.pictures[this.index]
+                }
             },
             next(){
                 this.index += 1
@@ -69,9 +73,7 @@
             },
         },
         mounted() {
-            console.log(this.pics)
             this.pictures = JSON.parse(this.pics)
-            console.log(this.pictures)
             this.changeImage()
         },
     }
