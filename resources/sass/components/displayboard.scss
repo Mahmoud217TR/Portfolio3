@@ -5,14 +5,26 @@ $display-board-width-large: 800px;
 
 
 .display-container{
-    svg{
+    position: relative;
+    .board-svg{
         width: $display-board-width;
     }
     #top-right-corner path,
     #top-left-corner path,
     #bottom-right-corner path,
     #bottom-left-corner path{
-        animation: color-change 3s infinite linear;
+        animation: color-change 1s infinite linear;
+    }
+
+    .displayboard-img{
+        position: absolute;
+        top: 169px;
+        left: 23px;
+        img{
+            width: 254px;
+            height: 129px;
+            border: #00FC92 solid 1px;
+        }
     }
 }
 
@@ -40,8 +52,16 @@ $display-board-width-large: 800px;
 
 @media (min-width: 768px){
     .display-container{
-        svg{
+        .board-svg{
             width: $display-board-width-medium;
+        }
+        .displayboard-img{
+            top: 127px;
+            left: 38px;
+            img{
+                width: 423px;
+                height: 215px;
+            }
         }
     }
 }
@@ -50,8 +70,17 @@ $display-board-width-large: 800px;
 
 @media (min-width: 992px){
     .display-container{
-        svg{
+        .board-svg{
             width: $display-board-width-large;
+        }
+
+        .displayboard-img{
+            top: 62px;
+            left: 61px;
+            img{
+                width: 678px;
+                height: 345px;
+            }
         }
     }
 }
