@@ -9,7 +9,7 @@
     <a href="{{ route('project.show',$project) }}" class="project-link">
         @include('components.buttons.smallbutton',['text'=>'view'])
     </a>
-    <p class="project-description text-white-color savec">
-        {{ $project->description??"Project Description goes here" }}
-    </p>
+    <div class="project-description text-white-color savec">
+        {!! $project->description??"Project Description goes here" !!}
+    </div>
 </div>  

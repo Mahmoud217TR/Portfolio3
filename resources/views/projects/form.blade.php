@@ -20,7 +20,7 @@
 </div>
 <div class="row">
     <div class="col">
-        <editor-component data="{{ old('description')??$project->description }}" inputName='description' inputID='description'></editor-component>
+        <editor-component data="{{ old('description')??$project->description }}" input-name='description' input-id='description'></editor-component>
 
         @error('description')
             <span class="invalid-feedback" role="alert">
@@ -39,6 +39,22 @@
         <input id="date" type="date" class="form-control @error('date') is-invalid @enderror" name="date" value="{{ old('date')??$project->date }}" required>
 
         @error('date')
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+            </span>
+        @enderror
+    </div>
+</div>
+
+{{-- Project Link --}}
+<div class="row mt-5">
+    <label for="link" class="col col-form-label text-white-color hyper-helix text-h3">Link: </label>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <input id="link" type="url" class="form-control @error('link') is-invalid @enderror" name="link" value="{{ old('link')??$project->link }}" required >
+
+        @error('link')
             <span class="invalid-feedback" role="alert">
                 <strong>{{ $message }}</strong>
             </span>

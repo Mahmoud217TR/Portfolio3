@@ -11,6 +11,12 @@
     <form action="{{ route('project.store') }}" method="post">
         @csrf
         @include('projects.form')
+        <div class="row mt-5">
+            <div class="col">
+                <button id="submit-button" class="d-none" type="submit"></button>
+                <a onclick="event.preventDefault();document.getElementById('submit-button').click();">@include('components.buttons.button',['text'=>'create'])</a>
+            </div>
+        </div>
     </form>
 </div>
 @endsection
