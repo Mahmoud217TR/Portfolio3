@@ -10,7 +10,7 @@
     <title>@yield('title',config('app.name', 'Laravel'))</title>
 
     <!-- Fav Icon -->
-    <link rel="shortcut icon" href="{{ asset('images/logo/mahmoudtr.ico') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('images/logo/mahmoudtr-2.ico') }}" type="image/x-icon">
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
