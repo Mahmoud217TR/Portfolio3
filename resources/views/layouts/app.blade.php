@@ -24,6 +24,7 @@
 </head>
 <body>
     <div id="app">
+        @include('layouts.loadingscreen')
         <nav class="navbar navbar-expand-md navbar-dark">
             <div class="container justify-self-center">
                 <a class="navbar-brand hyper-helix text-h2" href="{{ url('/') }}">

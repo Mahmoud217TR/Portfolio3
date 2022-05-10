@@ -129,3 +129,137 @@ input:focus{
 ::-webkit-calendar-picker-indicator{
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 24 24"><path fill="%2300FC92" d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/></svg>');
 }
+
+.loading-screen{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}
+
+.backdrop{
+    background-color: $dark-color;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.loading-image{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    #mahmoudtr-glowing-link{
+        #background-1{
+            animation: background-color-change 5s infinite ease-in-out;
+        }
+        #background-2{
+            animation: circle-color-change 5s infinite ease-in-out;
+        }
+        #background-3{
+            animation: circle-color-change 5s infinite ease-in-out;
+        }
+        #MTR{
+            path{
+                animation: logo-color-change 5s infinite ease-in-out;
+            }
+        }
+    }
+}
+
+/* Animations */
+
+@-moz-keyframes background-color-change { 
+    20% { fill: #111119; }
+    60% { fill: #111119; }
+    65% { fill: #0F2825; }
+    70% { fill: #0A8858; }
+    75% { fill: #00FC92; }
+}
+@-webkit-keyframes background-color-change { 
+    20% { fill: #111119; }
+    60% { fill: #111119; }
+    65% { fill: #0F2825; }
+    70% { fill: #0A8858; }
+    75% { fill: #00FC92; }
+}
+@keyframes background-color-change { 
+    20% { fill: #111119; }
+    60% { fill: #111119; }
+    65% { fill: #0F2825; }
+    70% { fill: #0A8858; }
+    75% { fill: #00FC92; }
+}
+
+@-moz-keyframes circle-color-change { 
+    5% { fill: #0A8858; }
+    10% { fill: #00FC92; }
+    15% { fill: #0F2825; }
+    20% { fill: #111119; }
+    70% { fill: #111119; }
+    75% { fill: #0F2825; }
+    80% { fill: #0A8858; }
+    90% { fill: #00FC92; }
+}
+@-webkit-keyframes circle-color-change { 
+    5% { fill: #0A8858; }
+    10% { fill: #00FC92; }
+    15% { fill: #0F2825; }
+    20% { fill: #111119; }
+    70% { fill: #111119; }
+    75% { fill: #0F2825; }
+    80% { fill: #0A8858; }
+    90% { fill: #00FC92; }
+}
+@keyframes circle-color-change { 
+    5% { fill: #0A8858; }
+    10% { fill: #00FC92; }
+    15% { fill: #0F2825; }
+    20% { fill: #111119; }
+    70% { fill: #111119; }
+    75% { fill: #0F2825; }
+    80% { fill: #0A8858; }
+    90% { fill: #00FC92; }
+}
+
+@-moz-keyframes logo-color-change { 
+    30% { fill: #00FC92; }
+    35% { fill: #0A8858; }
+    40% { fill: #0F2825; }
+    45% { fill: #0A8858; }
+    50% { fill: #00FC92; }
+    60% { fill: #00FC92; }
+    65% { fill: #0A8858; }
+    70% { fill: #0F2825; }
+    75% { fill: #111119; }
+}
+@-webkit-keyframes logo-color-change { 
+    30% { fill: #00FC92; }
+    35% { fill: #0A8858; }
+    40% { fill: #0F2825; }
+    45% { fill: #0A8858; }
+    50% { fill: #00FC92; }
+    60% { fill: #00FC92; }
+    65% { fill: #0A8858; }
+    70% { fill: #0F2825; }
+    75% { fill: #111119; }
+}
+@keyframes logo-color-change { 
+    30% { fill: #00FC92; }
+    35% { fill: #0A8858; }
+    40% { fill: #0F2825; }
+    45% { fill: #0A8858; }
+    50% { fill: #00FC92; }
+    60% { fill: #00FC92; }
+    65% { fill: #0A8858; }
+    70% { fill: #0F2825; }
+    75% { fill: #111119; }
+}
+
+.loading-screen-fade{
+    display: none;
+}
