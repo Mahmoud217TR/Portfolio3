@@ -12,7 +12,7 @@
         </div>
         <div class="col-lg d-flex justify-content-center align-items-center">
             <div class="attachment">
-                @include('attachments')
+                @include('info')
             </div>
         </div>
     </div>
