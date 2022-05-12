@@ -22,6 +22,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::controller(PortfolioController::class)->group(function(){
     Route::get('/','welcome')->name('welcome');
     Route::get('/about','about')->name('about');
+    Route::get('/contacts','contacts')->name('contacts');
 });
 
 Route::resource('project', ProjectController::class);

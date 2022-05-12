@@ -46,7 +46,7 @@
                         <div class="dropdown-menu dropdown-menu-end menu-component me-4" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="{{ route('about') }}">@include('components.menuitem',['text'=>'about'])</a>
                             <a class="dropdown-item" href="{{ route('project.index') }}">@include('components.menuitem',['text'=>'projects'])</a>
-                            <a class="dropdown-item" href="#">@include('components.menuitem',['text'=>'contacts'])</a>
+                            <a class="dropdown-item" href="{{ route('contacts') }}">@include('components.menuitem',['text'=>'contacts'])</a>
                             @auth
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();

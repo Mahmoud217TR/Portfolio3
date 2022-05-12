@@ -16,7 +16,7 @@
                     <li><a href="#">@include('components.buttons.specialbutton',['text'=>'Download CV'])</a></li>
                     <li class="mt-3"><a href="{{ route('about') }}">@include('components.buttons.specialbutton',['text'=>'About Me'])</a></li>
                     <li class="mt-3"><a href="{{ route('project.index') }}">@include('components.buttons.specialbutton',['text'=>'My Projects'])</a></li>
-                    <li class="mt-3"><a href="#">@include('components.buttons.specialbutton',['text'=>'Contacts'])</a></li>
+                    <li class="mt-3"><a href="{{ route('contacts') }}">@include('components.buttons.specialbutton',['text'=>'Contacts'])</a></li>
                 </ul>
             </div>
             <div class="col-lg-6 d-flex justify-content-center justify-content-lg-end align-items-center">
