@@ -44,6 +44,7 @@ class ProjectController extends Controller
      */
     public function store(StoreProjectRequest $request)
     {
+        $this->authorize('create', Project::class);
         $project = Project::create($request->all());
         return redirect()->route('project.show',$project);
     }
@@ -68,7 +69,9 @@ class ProjectController extends Controller
      */
     public function edit(Project $project)
     {
-        //
+        $this->authorize('update', $project);
+        $project->with('attachments');
+        return view('projects.edit',compact('project'));
     }
 
     /**
@@ -80,7 +83,9 @@ class ProjectController extends Controller
      */
     public function update(UpdateProjectRequest $request, Project $project)
     {
-        //
+        $this->authorize('update', $project);
+        $project->update($request->all());
+        return redirect()->route('project.show',$project);
     }
 
     /**

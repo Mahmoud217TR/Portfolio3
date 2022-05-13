@@ -17,7 +17,12 @@
     </div>
     <div class="row mb-3">
         <div class="col">
-            <a href="{{ $project->link }}" target="_blank">@include('components.buttons.smallbutton',['text'=>'Link'])</a>
+            <a class="me-2" href="{{ $project->link }}" target="_blank">@include('components.buttons.smallbutton',['text'=>'Link'])</a>
+            @auth
+                @can('update',$project)
+                    <a class="me-2" href="{{ route('project.edit',$project) }}">@include('components.buttons.smallbutton',['text'=>'edit'])</a>
+                @endcan
+            @endauth
         </div>
         <div class="col d-flex align-items-center justify-content-end">
             <p class="text-muted savec pt-1 mb-0">
