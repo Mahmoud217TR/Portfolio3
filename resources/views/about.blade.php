@@ -2,8 +2,13 @@
 @section('title','About Me')
 
 @section('content')
-<div class="container">
-    <div class="row mt-5">
+<div class="container mt-5">
+    <div class="row">
+        <div class="col">
+            <h1 class="text-h1 hyper-helix ps-2 mb-4">About Me</h1>
+        </div>
+    </div>
+    <div class="row">
         <div class="col-lg-6 col-md-10 mt-5">
             <h3 class="text-h3 text-light-color hyper-helix">General</h3>
             <p class="text-white-color savec mt-4">
