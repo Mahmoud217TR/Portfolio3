@@ -10,9 +10,9 @@
     </div>
     <div class="row mb-3">
         <div class="col">
-            <p class="text-muted savec">
+            <div class="text-muted savec">
                 {!! $project->description !!}
-            </p>
+            </div>
         </div>
     </div>
     <div class="row mb-3">
