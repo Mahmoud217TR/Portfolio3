@@ -5,9 +5,17 @@ namespace App\Http\Controllers;
 use App\Models\Attachment;
 use App\Http\Requests\StoreAttachmentRequest;
 use App\Http\Requests\UpdateAttachmentRequest;
+use App\Models\Project;
+use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\File;
 
 class AttachmentController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('admin');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -23,9 +31,10 @@ class AttachmentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Project $project)
     {
-        //
+        $project->with('attachments');
+        return view('attachments.create',compact('project'));
     }
 
     /**
@@ -34,9 +43,19 @@ class AttachmentController extends Controller
      * @param  \App\Http\Requests\StoreAttachmentRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreAttachmentRequest $request)
+    public function store(StoreAttachmentRequest $request, Project $project)
     {
-        //
+        $images = Collection::wrap($request->file);
+        $images->each(function($image) use ($project){
+            $current_url = $image->store('uploads/'.$project->title,'public');
+                     
+            Attachment::create([
+                'url' => asset('/storage/'.$current_url),
+                'project_id' => $project->id,
+                'thumb' => false,
+            ]);
+
+        });
     }
 
     /**
@@ -68,9 +87,9 @@ class AttachmentController extends Controller
      * @param  \App\Models\Attachment  $attachment
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateAttachmentRequest $request, Attachment $attachment)
+    public function update(UpdateAttachmentRequest $request)
     {
-        //
+        // 
     }
 
     /**

@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\AttachmentController;
 use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\ProjectController;
+use App\Models\Attachment;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,3 +28,8 @@ Route::controller(PortfolioController::class)->group(function(){
 });
 
 Route::resource('project', ProjectController::class);
+
+Route::controller(AttachmentController::class)->group(function(){
+    Route::get('/project/{project}/attachments/create','create')->name('attachment.create');
+    Route::post('/project/{project}/attachments','store')->name('attachment.store');
+});
