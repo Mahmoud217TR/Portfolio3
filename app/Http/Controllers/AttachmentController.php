@@ -8,6 +8,7 @@ use App\Http\Requests\UpdateAttachmentRequest;
 use App\Models\Project;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\File;
+use Image;
 
 class AttachmentController extends Controller
 {
@@ -47,8 +48,11 @@ class AttachmentController extends Controller
     {
         $images = Collection::wrap($request->file);
         $images->each(function($image) use ($project){
-            $current_url = $image->store('uploads/'.$project->title,'public');
-                     
+            $current_url = $image->store('uploads/'.$project->title,'public'); // Storing the image
+
+            $img = Image::make('storage/'.$current_url); // Fitting the image
+            $img->fit(733, 400)->save();
+
             Attachment::create([
                 'url' => asset('/storage/'.$current_url),
                 'project_id' => $project->id,
