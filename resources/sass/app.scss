@@ -153,6 +153,10 @@ input:focus{
     left: 50%;
     transform: translate(-50%, -50%);
 
+    .main-svg{
+        width: min(100%, 512px);
+    }
+
     #mahmoudtr-glowing-link{
         #background-1{
             animation: background-color-change 5s infinite ease-in-out;

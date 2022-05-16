@@ -6,7 +6,7 @@
 <div class="loading-screen" id="loading-screen">
     <div class="backdrop">
         <div class="loading-image">
-            <svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="main-svg" width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g id="mahmoudtr-glowing-link">
                     <circle id="background-3" opacity="0.7" cx="256" cy="256" r="256" fill="#0F2825"/>
                     <circle id="background-2" opacity="0.7" cx="256" cy="256" r="224" fill="#0A8858"/>

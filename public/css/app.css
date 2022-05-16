@@ -12566,6 +12566,9 @@ input:focus {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.loading-image .main-svg {
+  width: min(100%, 512px);
+}
 .loading-image #mahmoudtr-glowing-link #background-1 {
   -webkit-animation: background-color-change 5s infinite ease-in-out;
           animation: background-color-change 5s infinite ease-in-out;
