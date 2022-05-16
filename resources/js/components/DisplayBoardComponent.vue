@@ -17,7 +17,7 @@
                 </g>
             </g>
         </svg>
-        <a :href="currentUrl" target="_blank" class="displayboard-img">
+        <a :href="currentOriginal" target="_blank" class="displayboard-img">
             <img :src="currentUrl" alt="Project Pictures">
         </a>
         <div class="controls d-flex justify-content-between mt-5">
@@ -43,21 +43,19 @@
 
 <script>
     export default {
-        props: ['pics', 'prefix'],
+        props: ['pics'],
         data() {
             return {
                 index: 0,
                 pictures: [],
-                currentUrl: '#'
+                currentUrl: '#',
+                currentOriginal: '#'
             }
         },
         methods: {
             changeImage(){
-                if (this.prefix){
-                    this.currentUrl = this.prefix + this.pictures[this.index]
-                }else{
-                    this.currentUrl = this.pictures[this.index]
-                }
+                this.currentOriginal = this.pictures[this.index]['original']
+                this.currentUrl = this.pictures[this.index]['url']
             },
             next(){
                 this.index += 1

@@ -1,2 +1,2 @@
-<display-component pics='{{ $project->attachments->pluck('url') }}' {{-- prefix='asset('')' --}} ></display-component>
+<display-component pics='{{ $project->attachmentsForDisplay() }}' {{-- prefix='asset('')' --}} ></display-component>
     

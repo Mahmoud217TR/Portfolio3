@@ -5,12 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+use function PHPUnit\Framework\isNull;
+
 class Attachment extends Model
 {
     use HasFactory;
 
     protected $fillable = [
         'url',
+        'original',
         'project_id',
         'thumb',
     ];
@@ -21,5 +24,13 @@ class Attachment extends Model
 
     public function project(){
         return $this->belongsTo(Project::class);
+    }
+
+    public function makeThumb(){
+        if ($this->project->thumb()){
+            $this->project->thumb()->update(['thumb'=>'false']);
+        }
+        $this->update(['thumb'=>true]);
+        return $this->project->thumb();
     }
 }

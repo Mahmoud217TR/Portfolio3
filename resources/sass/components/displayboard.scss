@@ -6,6 +6,11 @@ $display-board-width-large: 800px;
 
 .display-container{
     position: relative;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     .board-svg{
         width: $display-board-width;
     }

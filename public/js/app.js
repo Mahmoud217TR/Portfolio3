@@ -22607,21 +22607,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: ['pics', 'prefix'],
+  props: ['pics'],
   data: function data() {
     return {
       index: 0,
       pictures: [],
-      currentUrl: '#'
+      currentUrl: '#',
+      currentOriginal: '#'
     };
   },
   methods: {
     changeImage: function changeImage() {
-      if (this.prefix) {
-        this.currentUrl = this.prefix + this.pictures[this.index];
-      } else {
-        this.currentUrl = this.pictures[this.index];
-      }
+      this.currentOriginal = this.pictures[this.index]['original'];
+      this.currentUrl = this.pictures[this.index]['url'];
     },
     next: function next() {
       this.index += 1;
@@ -22783,7 +22781,7 @@ var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 var _hoisted_9 = [_hoisted_8];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [_hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
-    href: $data.currentUrl,
+    href: $data.currentOriginal,
     target: "_blank",
     "class": "displayboard-img"
   }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
@@ -22825,12 +22823,12 @@ var _hoisted_1 = {
   "class": "container"
 };
 var _hoisted_2 = {
-  "class": "dropzone-area row justify-content-center",
+  "class": "dropzone-area row dropzone",
   ref: "imageUpload"
 };
 
 var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "drop-message col-12 py-2 text-center bg-dark h2"
+  "class": "drop-message col-12 py-2 text-center h2 hyper-helix mb-3"
 }, " Drop your files Here ", -1
 /* HOISTED */
 );

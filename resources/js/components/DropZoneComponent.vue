@@ -1,7 +1,7 @@
 <template>
     <div class="container">
-        <div class="dropzone-area row justify-content-center" ref="imageUpload">
-            <div class="drop-message col-12 py-2 text-center bg-dark h2">
+        <div class="dropzone-area row dropzone" ref="imageUpload">
+            <div class="drop-message col-12 py-2 text-center h2 hyper-helix mb-3">
                 Drop your files Here
             </div>
         </div>

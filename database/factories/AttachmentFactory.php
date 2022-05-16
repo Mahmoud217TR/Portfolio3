@@ -19,6 +19,7 @@ class AttachmentFactory extends Factory
     {
         return [
             'url' => $this->faker->imageUrl(733, 400, 'Project Picture', true),
+            'original' => $this->faker->imageUrl(1024, 1024, 'Project Picture', true),
             'project_id' => null,
             'thumb' => false,
         ];
@@ -38,7 +39,8 @@ class AttachmentFactory extends Factory
         return $this->state(function (array $attributes) {
             return [
                 'thumb' => true,
-                'url' => $this->faker->imageUrl(733, 400, 'Project Thumbnail', true)
+                'url' => $this->faker->imageUrl(733, 400, 'Project Thumbnail', true),
+                'original' => $this->faker->imageUrl(1024, 1024, 'Project Thumbnail', true),
             ];
         });
     }

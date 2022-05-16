@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Project;
 use App\Http\Requests\StoreProjectRequest;
 use App\Http\Requests\UpdateProjectRequest;
+use App\Models\Attachment;
+use Image;
 
 class ProjectController extends Controller
 {
@@ -46,7 +48,21 @@ class ProjectController extends Controller
     {
         $this->authorize('create', Project::class);
         $project = Project::create($request->all());
-        return redirect()->route('project.show',$project);
+
+        $thumb = $request->thumb;
+        $original_url = $thumb->store('uploads/'.$project->title.'/original','public'); // Storing the Original thumb
+        $current_url = $thumb->store('uploads/'.$project->title,'public'); // Storing the thumb
+
+        $img = Image::make('storage/'.$current_url); // Fitting the thumb
+        $img->fit(733, 400)->save();
+
+        Attachment::create([
+            'url' => asset('/storage/'.$current_url),
+            'original' => asset('/storage/'.$original_url),
+            'project_id' => $project->id,
+            'thumb' => true,
+        ]);
+        return redirect()->route('attachment.create',$project);
     }
 
     /**

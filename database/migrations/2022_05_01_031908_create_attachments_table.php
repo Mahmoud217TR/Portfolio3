@@ -17,6 +17,7 @@ return new class extends Migration
         Schema::create('attachments', function (Blueprint $table) {
             $table->id();
             $table->string('url');
+            $table->string('original');
             $table->foreignIdFor(Project::class)->constrained()->onDelete('cascade');
             $table->boolean('thumb');
             $table->timestamps();

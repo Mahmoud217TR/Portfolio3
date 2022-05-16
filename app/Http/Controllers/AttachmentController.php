@@ -48,6 +48,7 @@ class AttachmentController extends Controller
     {
         $images = Collection::wrap($request->file);
         $images->each(function($image) use ($project){
+            $original_url = $image->store('uploads/'.$project->title.'/original','public'); // Storing the original image
             $current_url = $image->store('uploads/'.$project->title,'public'); // Storing the image
 
             $img = Image::make('storage/'.$current_url); // Fitting the image
@@ -55,6 +56,7 @@ class AttachmentController extends Controller
 
             Attachment::create([
                 'url' => asset('/storage/'.$current_url),
+                'original' => asset('/storage/'.$original_url),
                 'project_id' => $project->id,
                 'thumb' => false,
             ]);

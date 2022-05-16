@@ -1,0 +1,30 @@
+// dropzone
+@import '~dropzone/src/basic.scss';
+@import '~dropzone/src/dropzone.scss';
+
+.dropzone-area{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border: none!important;
+
+    .dz-message{
+        display:  none!important;
+    }
+    
+    .drop-message{
+        background-color: #0F2825;
+        border: dashed 2px #00FC92;
+        min-height: 300px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+
+    .dz-preview {
+        flex: 1 0 0%;
+        background: none!important;
+        justify-content: center;
+        display: flex;
+    }
+}

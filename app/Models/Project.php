@@ -23,4 +23,8 @@ class Project extends Model
     public function thumb(){
         return $this->attachments()->where('thumb',true)->first();
     }
+
+    public function attachmentsForDisplay(){
+        return $this->hasMany(Attachment::class)->get(['original','url']);
+    }
 }

@@ -28,6 +28,7 @@ class StoreProjectRequest extends FormRequest
             'description' => 'string|required',
             'date' => 'date|required',
             'link' => 'url|required',
+            'thumb' => 'required',
         ];
     }
 }
