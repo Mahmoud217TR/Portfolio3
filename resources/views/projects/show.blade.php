@@ -22,6 +22,14 @@
                 @can('update',$project)
                     <a class="me-2" href="{{ route('project.edit',$project) }}">@include('components.buttons.smallbutton',['text'=>'edit'])</a>
                 @endcan
+                @can('delete',$project)
+                <a class="me-2" onclick="event.preventDefault();document.getElementById('remove-button').click();">@include('components.buttons.smallbutton',['text'=>'Remove'])</a>
+                <form action="{{ route('project.destroy',$project) }}" method="post">
+                    @csrf
+                    @method('Delete')
+                    <button id="remove-button" class="d-none" type="submit"></button>
+                </form>
+                @endcan
             @endauth
         </div>
         <div class="col d-flex align-items-center justify-content-end">

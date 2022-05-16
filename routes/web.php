@@ -32,4 +32,7 @@ Route::resource('project', ProjectController::class);
 Route::controller(AttachmentController::class)->group(function(){
     Route::get('/project/{project}/attachments/create','create')->name('attachment.create');
     Route::post('/project/{project}/attachments','store')->name('attachment.store');
+    Route::get('/project/{project}/attachments/edit','edit')->name('attachment.edit');
+    Route::delete('/attachment/{attachment}/destroy','destroy')->name('attachment.destroy');
+    Route::get('/attachment/{attachment}/thumb','thumb')->name('attachment.thumb');
 });

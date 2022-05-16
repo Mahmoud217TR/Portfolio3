@@ -6,6 +6,7 @@ use App\Models\Project;
 use App\Http\Requests\StoreProjectRequest;
 use App\Http\Requests\UpdateProjectRequest;
 use App\Models\Attachment;
+use Illuminate\Support\Facades\File;
 use Image;
 
 class ProjectController extends Controller
@@ -14,6 +15,13 @@ class ProjectController extends Controller
     public function __construct()
     {
         $this->middleware('admin')->except('index', 'show');
+    }
+
+    private function removeDir($path){
+        if(File::isDirectory($path)){
+            File::cleanDirectory($path);
+            File::deleteDirectory($path);
+        }
     }
 
     /**
@@ -112,6 +120,9 @@ class ProjectController extends Controller
      */
     public function destroy(Project $project)
     {
-        //
+        $this->authorize('delete',$project);
+        $this->removeDir('storage/uploads/'.$project->title);
+        $project->delete();
+        return redirect()->route('project.index');
     }
 }

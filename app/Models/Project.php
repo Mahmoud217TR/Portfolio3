@@ -25,6 +25,6 @@ class Project extends Model
     }
 
     public function attachmentsForDisplay(){
-        return $this->hasMany(Attachment::class)->get(['original','url']);
+        return $this->hasMany(Attachment::class)->orderBy('thumb','desc')->get(['original','url','thumb']);
     }
 }

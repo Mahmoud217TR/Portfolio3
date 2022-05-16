@@ -28,7 +28,7 @@ class Attachment extends Model
 
     public function makeThumb(){
         if ($this->project->thumb()){
-            $this->project->thumb()->update(['thumb'=>'false']);
+            $this->project->thumb()->update(['thumb'=>false]);
         }
         $this->update(['thumb'=>true]);
         return $this->project->thumb();

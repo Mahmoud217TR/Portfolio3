@@ -17,6 +17,19 @@ class AttachmentController extends Controller
         $this->middleware('admin');
     }
 
+    private function get_real_path($path){
+        return substr($path, strpos($path,"storage"), strlen($path));
+    }
+
+    private function removeFile($path){
+        $real_path = $this->get_real_path($path);
+        if($real_path){
+            if(File::exists($real_path)){
+                File::delete($real_path);
+            }
+        }
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -81,9 +94,10 @@ class AttachmentController extends Controller
      * @param  \App\Models\Attachment  $attachment
      * @return \Illuminate\Http\Response
      */
-    public function edit(Attachment $attachment)
+    public function edit(Project $project)
     {
-        //
+        $project->with('attachments');
+        return view('attachments.edit',compact('project'));
     }
 
     /**
@@ -106,6 +120,23 @@ class AttachmentController extends Controller
      */
     public function destroy(Attachment $attachment)
     {
-        //
+        if($attachment->project->thumb()->id == $attachment->id){
+            $new_thumb = $attachment->project->attachments()->where('id','!=',$attachment->id)->first();
+            if($new_thumb){
+                $new_thumb->makeThumb();
+            }else{
+                return back();
+            }
+        }
+        $this->removeFile($attachment->url);
+        $this->removeFile($attachment->original);
+        $attachment->delete();
+        return back();
+    }
+
+    public function thumb(Attachment $attachment)
+    {
+        $attachment->makeThumb();
+        return redirect()->route('project.show',$attachment->project);
     }
 }

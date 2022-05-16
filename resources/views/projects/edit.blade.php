@@ -14,6 +14,11 @@
         @include('projects.form')
         <div class="row mt-5">
             <div class="col">
+                <a href="{{ route('attachment.edit',$project) }}">@include('components.buttons.button',['text'=>'Pics'])</a>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col">
                 <button id="submit-button" class="d-none" type="submit"></button>
                 <a onclick="event.preventDefault();document.getElementById('submit-button').click();">@include('components.buttons.button',['text'=>'update'])</a>
             </div>
