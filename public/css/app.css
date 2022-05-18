@@ -12436,6 +12436,84 @@ textarea.form-control-lg {
   display: flex;
 }
 
+.info-card {
+  background-color: #00FC92;
+  height: 14rem;
+  transition: 0.3s linear;
+  cursor: pointer;
+}
+.info-card .card-info {
+  opacity: 0;
+  transition: 0.4s linear;
+}
+.info-card .card-image {
+  background-color: rgba(0, 0, 0, 0);
+  transition: 0.4s linear;
+}
+
+.info-card:hover {
+  background-color: #0F2825;
+}
+.info-card:hover .card-info {
+  opacity: 1;
+  color: #00FC92;
+  transform: scale(1.4);
+}
+.info-card:hover .card-image {
+  opacity: 0;
+  transform: scale(0.4);
+}
+
+.alert-cust-main {
+  color: #ffffff;
+  background-color: #00FC92;
+  border-color: #00FC92;
+}
+
+.floating-message {
+  position: fixed;
+  opacity: 0;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 200;
+  -webkit-animation: opa0 4000ms ease-in-out;
+          animation: opa0 4000ms ease-in-out;
+  visibility: hidden;
+}
+@-webkit-keyframes opa0 {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  75% {
+    opacity: 1;
+  }
+  90% {
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes opa0 {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  75% {
+    opacity: 1;
+  }
+  90% {
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
 .hyper-helix {
   font-family: HyperHelix;
 }

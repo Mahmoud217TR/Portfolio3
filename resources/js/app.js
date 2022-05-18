@@ -7,4 +7,5 @@ let app=createApp({}).use(CKEditor)
 app.component('display-component', require('./components/DisplayBoardComponent.vue').default);
 app.component('editor-component', require('./components/EditorComponent.vue').default);
 app.component('dropzone-component', require('./components/DropZoneComponent.vue').default);
+app.component('contact-component', require('./components/ContactComponent.vue').default);
 app.mount("#app");
