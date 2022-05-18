@@ -12838,3 +12838,66 @@ input:focus {
   border: 2px solid #00FC92;
   border-radius: 3px;
 }
+
+.form-control:not(:-moz-placeholder-shown) ~ label {
+  position: absolute;
+  top: -0.75rem;
+  left: 1.5rem;
+  background-color: #111119;
+  padding: 0 0.25rem;
+  opacity: 1;
+  color: #00FC92;
+  font-family: HyperHelix;
+}
+
+.form-control:not(:-ms-input-placeholder) ~ label {
+  position: absolute;
+  top: -0.75rem;
+  left: 1.5rem;
+  background-color: #111119;
+  padding: 0 0.25rem;
+  opacity: 1;
+  color: #00FC92;
+  font-family: HyperHelix;
+}
+
+.form-control:not(:placeholder-shown) ~ label {
+  position: absolute;
+  top: -0.75rem;
+  left: 1.5rem;
+  background-color: #111119;
+  padding: 0 0.25rem;
+  opacity: 1;
+  color: #00FC92;
+  font-family: HyperHelix;
+}
+
+.text-control {
+  resize: none;
+  height: 12rem;
+  color: #00FC92;
+  font-family: HyperHelix;
+}
+
+textarea {
+  color: #00FC92 !important;
+}
+
+.text-control:focus {
+  border-color: #00FC92 !important;
+  box-shadow: 0 0 0 0.25rem rgba(8, 138, 87, 0.25) !important;
+}
+
+.floating-control {
+  position: relative;
+}
+
+.floating-label {
+  position: absolute;
+  opacity: 0;
+  top: 1rem;
+  left: 1.5rem;
+  background-color: #111119;
+  padding: 0 0.25rem;
+  transition: 0.3s linear ease-in;
+}
