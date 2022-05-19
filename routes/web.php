@@ -39,4 +39,4 @@ Route::controller(AttachmentController::class)->group(function(){
     Route::get('/attachment/{attachment}/thumb','thumb')->name('attachment.thumb');
 });
 
-Route::resource('message', MessageController::class)->except('create');
+Route::resource('message', MessageController::class)->except('create','edit','update');

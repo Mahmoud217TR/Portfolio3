@@ -18,7 +18,7 @@ class MessagePolicy
      */
     public function viewAny(User $user)
     {
-        //
+        return $user->admin;
     }
 
     /**
@@ -30,7 +30,7 @@ class MessagePolicy
      */
     public function view(User $user, Message $message)
     {
-        //
+        return $user->admin;
     }
 
     /**
@@ -65,7 +65,7 @@ class MessagePolicy
      */
     public function delete(User $user, Message $message)
     {
-        //
+        return $user->admin;
     }
 
     /**
