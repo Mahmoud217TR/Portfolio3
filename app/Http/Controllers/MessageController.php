@@ -21,7 +21,8 @@ class MessageController extends Controller
      */
     public function index()
     {
-        //
+        $messages = Message::latest()->paginate(20);
+        return view('message.index',compact('messages'));
     }
 
     /**

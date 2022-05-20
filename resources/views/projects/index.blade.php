@@ -19,21 +19,6 @@
                 </p>
             @endforelse
         </div>
-        <div class="row mt-3">
-            <div class="col d-flex justify-content-center align-items-center">
-                <!-- Previous link -->
-                @if($projects->currentPage() > 1)
-                    <a href="{{ $projects->previousPageUrl() }}">@include('components.buttons.smallbutton',['text'=>'Previous'])</a>
-                @endif
-
-                <!-- Current Page Number -->
-                <span class="pagination-indecator text-white-color mx-2 hyper-helix"> {{ $projects->currentPage() }} </span>
-
-                <!-- Next link -->
-                @if($projects->hasMorePages())
-                    <a href="{{ $projects->nextPageUrl() }}">@include('components.buttons.smallbutton',['text'=>'Next'])</a>
-                @endif
-            </div>
-        </div>
+        @include('layouts.paginator',['objects'=>$projects])
     </div>
 @endsection
