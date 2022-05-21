@@ -4,6 +4,7 @@ use App\Http\Controllers\AttachmentController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\SettingsContorller;
 use App\Models\Attachment;
 use App\Models\Message;
 use Illuminate\Support\Facades\Route;
@@ -40,3 +41,8 @@ Route::controller(AttachmentController::class)->group(function(){
 });
 
 Route::resource('message', MessageController::class)->except('create','edit','update');
+
+Route::controller(SettingsContorller::class)->group(function(){
+    Route::get('/settings','index')->name('settings');
+    Route::patch('/settings','update')->name('settings.update');
+});

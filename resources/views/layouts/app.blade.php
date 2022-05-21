@@ -44,20 +44,24 @@
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-end menu-component me-4" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ route('about') }}">@include('components.menuitem',['text'=>'about'])</a>
-                            <a class="dropdown-item" href="{{ route('project.index') }}">@include('components.menuitem',['text'=>'projects'])</a>
-                            <a class="dropdown-item" href="{{ route('contacts') }}">@include('components.menuitem',['text'=>'contacts'])</a>
-                            @auth
-                            <a class="dropdown-item" href="{{ route('logout') }}"
-                                onclick="event.preventDefault();
-                                            document.getElementById('logout-form').submit();">
-                                @include('components.menuitem', ['text'=>'Logout'])
-                            </a>
+                            @guest
+                                <a class="dropdown-item" href="{{ route('about') }}">@include('components.menuitem',['text'=>'about'])</a>
+                                <a class="dropdown-item" href="{{ route('project.index') }}">@include('components.menuitem',['text'=>'projects'])</a>
+                                <a class="dropdown-item" href="{{ route('contacts') }}">@include('components.menuitem',['text'=>'contacts'])</a>
+                            @else
+                                <a class="dropdown-item" href="{{ route('home') }}">@include('components.menuitem',['text'=>'home'])</a>
+                                <a class="dropdown-item" href="{{ route('project.index') }}">@include('components.menuitem',['text'=>'projects'])</a>
+                                <a class="dropdown-item" href="{{ route('message.index') }}">@include('components.menuitem',['text'=>'messages'])</a>
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                    onclick="event.preventDefault();
+                                                document.getElementById('logout-form').submit();">
+                                    @include('components.menuitem', ['text'=>'Logout'])
+                                </a>
 
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                @csrf
-                            </form>
-                            @endauth
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+                            @endguest
                         </div>
                     </li>
                 </ul>
