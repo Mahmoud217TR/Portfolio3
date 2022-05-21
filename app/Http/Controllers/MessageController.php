@@ -45,7 +45,8 @@ class MessageController extends Controller
      */
     public function show(Message $message)
     {
-        //
+        $this->authorize('view',$message);
+        return view('message.show',compact('message'));
     }
 
     /**
@@ -56,6 +57,8 @@ class MessageController extends Controller
      */
     public function destroy(Message $message)
     {
-        //
+        $this->authorize('delete',$message);
+        $message->delete();
+        return redirect()->route('message.index');
     }
 }
