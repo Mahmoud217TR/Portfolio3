@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\ContactMessageEvent;
 use App\Models\Message;
 use App\Http\Requests\StoreMessageRequest;
 use App\Http\Requests\UpdateMessageRequest;
@@ -35,8 +36,8 @@ class MessageController extends Controller
      */
     public function store(StoreMessageRequest $request)
     {
-        Message::create($request->all());
-        // Mail::to('mahmoudtr@gmail.com')->send(new ContactFormMail($request->all()));
+        
+        event(new ContactMessageEvent($request->all()));
         return redirect()->route('contacts');
     }
 
