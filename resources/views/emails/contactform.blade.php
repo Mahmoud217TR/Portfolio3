@@ -1,3 +1,6 @@
 @component('mail::message')
-# Somone left a message on your portfolio
+# You received a message on your Portfolio
+Subject: {{ $data['subject'] }}
+<br>
+From: {{ $data['fullname'] }}
 @endcomponent

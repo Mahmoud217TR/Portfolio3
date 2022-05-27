@@ -10,7 +10,12 @@
     </div>
     <div class="row">
         <div class="col">
-            <h2 class="savec ps-2 mb-4">Sent From: {{ $message->email }}</h2>
+            <h2 class="savec ps-2 mb-4">Sent From: {{ $message->fullname }}</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <h2 class="savec ps-2 mb-4">Email: {{ $message->email }}</h2>
         </div>
     </div>
     <div class="row">

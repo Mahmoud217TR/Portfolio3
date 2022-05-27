@@ -20,7 +20,7 @@ class EventServiceProvider extends ServiceProvider
     protected $listen = [
         ContactMessageEvent::class => [
             MessageRecordListener::class,
-            MessageMailListener::class,
+            // MessageMailListener::class,
         ],
     ];
 
