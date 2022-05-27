@@ -12514,6 +12514,16 @@ textarea.form-control-lg {
   }
 }
 
+.info-alert {
+  width: 70%;
+  position: fixed;
+  top: 12%;
+  left: 50%;
+  padding: 2rem 0;
+  transform: translate(-50%);
+  border-radius: 4px;
+}
+
 .hyper-helix {
   font-family: HyperHelix;
 }
@@ -12916,4 +12926,16 @@ a {
 
 a:hover {
   color: #00FC92;
+}
+
+.fader {
+  -webkit-transition: opacity 5s ease-in-out;
+  -moz-transition: opacity 5s ease-in-out;
+  -ms-transition: opacity 5s ease-in-out;
+  -o-transition: opacity 5s ease-in-out;
+  opacity: 1;
+}
+
+.fader.fade {
+  opacity: 0;
 }

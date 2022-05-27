@@ -351,3 +351,15 @@ a{
 a:hover{
     color: $light-color;
 }
+
+.fader{
+    -webkit-transition: opacity 5s ease-in-out;
+    -moz-transition: opacity 5s ease-in-out;
+    -ms-transition: opacity 5s ease-in-out;
+    -o-transition: opacity 5s ease-in-out;
+     opacity: 1;
+}
+
+.fader.fade{
+    opacity: 0;
+}

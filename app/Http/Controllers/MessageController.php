@@ -38,7 +38,7 @@ class MessageController extends Controller
     {
         
         event(new ContactMessageEvent($request->all()));
-        // Flush a Success Message ???
+        session()->flash('message',"Thanks, Your message have been received.");
         return redirect()->route('contacts');
     }
 

@@ -69,6 +69,7 @@
         </nav>
 
         <main class="py-4">
+            @include('components.infoalert')
             @yield('content')
         </main>
     </div>
